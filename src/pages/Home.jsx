@@ -10,12 +10,13 @@ function Home(){
         navigate('/login');
     }
     return <>
-        
         <Navbar></Navbar>
+        
         <div className="w-full h-[40arem] relative">
             <img src={BannerImage} alt="" 
             className="w-full h-full"
             />
+            
 
 
             <div className="absolute top-20 left-0 right-0 mx-auto w-[60rem]">
@@ -30,7 +31,7 @@ function Home(){
                     </div>
 
                     <div className="flex justify-center">
-                        <button className="btn btn-outline text-white"
+                        <button className="btn btn-white  "
                             onClick={handleClick}
                         >SignIn</button>
                     </div>

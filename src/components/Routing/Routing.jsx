@@ -6,6 +6,13 @@ import PageNotFound from "../PageNotFound";
 import GoogleLogin from "../GoogleLogin";
 import { useState } from "react";
 import RefreshHandler from "../RefreshHandler";
+import Orders from "../../pages/Orders";
+import Customers from "../../pages/Customers";
+import SegmentRule from "../../pages/SegmentRule";
+
+import Campaign from "../../pages/Campaign";
+import CreateCampaigns from "../../pages/CreateCampaings";
+
 
 function Routing(){
     const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -26,11 +33,23 @@ function Routing(){
         <Route
             path="/dashboard"
             element={
+               
                 <PrivateRoute element={<Dashboard/>}>
                     {/* <Dashboard /> */}
                 </PrivateRoute>
             }
         />
+
+        <Route path="/orders" element={<Orders/>}/>
+
+        <Route path="/customers" element={<Customers/>}/>
+         
+         <Route path ="segments" element={<SegmentRule/>}/>
+
+         <Route path = "campaigns-history" element={<Campaign/>}/>
+
+        <Route path = "create-campaigns" element={<CreateCampaigns/>}/>
+
         <Route path="*" element={<PageNotFound/>}></Route>
       </Routes>
 
