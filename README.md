@@ -1,12 +1,71 @@
-# React + Vite
+# CRM Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend for a CRM platform where users can:
 
-Currently, two official plugins are available:
+- 🔐 Log in with Google
+- 📊 Access their dashboard
+- 📥 Ingest orders and customer data
+- 🎯 Create and send marketing campaigns
+- 📜 View campaign history
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### ✅ Google Sign-In
+Secure login using your Google account.
+
+### 📊 Dashboard
+A central place to monitor activity, recent campaigns, and statistics.
+
+### 📥 Data Ingestion
+Upload and manage:
+- Customer Data
+- Order Data
+
+### ✉️ Campaign Management
+- Create a new campaign using segment rules and customer selection
+- Auto-generate messages using AI (e.g., Gemini)
+- Send campaigns to customers
+
+### 📄 Campaign History
+View past campaigns, their message, recipients, and delivery status.
+
+---
+
+## 🛠 Tech Stack
+
+- **React.js**
+- **TailwindCSS**
+- **Ant Design**
+- **Google OAuth**
+- **Axios / Fetch API**
+- **Environment-based configuration**
+
+---
+
+## 📦 Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/crm-frontend.git
+   cd crm-frontend
+
+2. **Install Dependencies**
+
+    ```
+    npm install
+    ```
+
+3. **Set up .env.local**
+
+```
+client_id = 
+client_secret = 
+```
+
+4. **Run the app**
+```
+npm run dev
+```
+
