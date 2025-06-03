@@ -59,10 +59,7 @@ export default function Dashboard() {
           <p className="text-3xl">{stats.totalCustomers}</p>
         </div>
 
-        <div className="bg-base-100 shadow-md rounded-xl p-4 border border-gray-200">
-          <h2 className="text-xl font-semibold text-yellow-500">Pending</h2>
-          <p className="text-3xl">{stats.totalPending}</p>
-        </div>
+        
       </div>
     </div>
     </div>
