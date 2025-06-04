@@ -3,6 +3,7 @@ import { Form, Input, Button, Select, message } from "antd";
 import { getToken } from "../utils/getToken.js";
 import Sidebar from "../components/Sidebar.jsx";
 import axios from "axios";
+import { baseURL } from "../utils/config.js";
 const { Option } = Select;
 
 const SegmentRule = () => {
@@ -34,7 +35,7 @@ const SegmentRule = () => {
         const token = getToken();
         console.log(token);
 
-      const response = await axios.post('http://localhost:8080/api/v1/segment', payload,{
+      const response = await axios.post(`${baseURL}/api/v1/segment`, payload,{
         headers: {
             
             'x-access-token': token,

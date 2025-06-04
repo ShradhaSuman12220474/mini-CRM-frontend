@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-
+import { baseURL } from '../utils/config.js';
 import Sidebar from './Sidebar';
 
 export default function Dashboard() {
@@ -20,7 +20,8 @@ export default function Dashboard() {
         const {token} = user;
         console.log(token);
       try {
-        const res = await axios.get('http://localhost:8080/api/v1/dashboard-summary', {
+        console.log(baseURL);
+        const res = await axios.get(`${baseURL}/dashboard-summary`, {
           headers: {
             'x-access-token': token,
             'Content-Type': 'application/json',

@@ -1,7 +1,8 @@
 import axios from "axios";
+import { baseURL } from "./utils/config.js";
 
 const api = axios.create({
-    baseURL: 'http://localhost:8080'
+    baseURL
 });
 
-export const googleAuth = (code) => api.get(`api/v1/user/oauth?code=${code}`);
+export const googleAuth = (code) => api.get(`user/oauth?code=${code}`);

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Sidebar from '../components/Sidebar';
-
+import { baseURL } from '../utils/config.js';
 export default function Orders() {
 
   const [file, setFile] = useState(null);
@@ -29,7 +29,7 @@ export default function Orders() {
         const {token} = user;
         console.log(token);
       const res = await axios.post(
-        'http://localhost:8080/api/v1/uploads/orders', // Update endpoint as needed
+        `${baseURL}/uploads/orders`, // Update endpoint as needed
         formData,
         {
           headers: {
@@ -55,7 +55,7 @@ export default function Orders() {
         const {token} = user;
         // console.log(token);
       const res = await axios.get(
-        `http://localhost:8080/api/v1/orders`,
+        `${baseURL}/orders`,
         {
           headers: { 'x-access-token': token },
         }

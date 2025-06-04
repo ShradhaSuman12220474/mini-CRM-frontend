@@ -83,6 +83,7 @@ const CreateCampaigns = () => {
       if (data.success) {
         form.setFieldsValue({ message: data.message });
         message.success("Message generated!");
+        alert("Campaign created successfully");
       } else {
         message.error("Failed to generate message");
       }

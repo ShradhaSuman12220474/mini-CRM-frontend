@@ -1,11 +1,12 @@
 import { useGoogleLogin } from "@react-oauth/google";
 import { googleAuth } from "../api";
 import { useNavigate } from "react-router-dom";
+
 function GoogleLogin(){
     const navigate = useNavigate();
     const responseGoogle = async (authResult)=>{
         try{
-            
+            console.log("AuthResult : ",authResult);
             if(authResult['code']){
                 const result = await googleAuth(authResult['code']);
                 const {email, name, picture} = result.data.user;

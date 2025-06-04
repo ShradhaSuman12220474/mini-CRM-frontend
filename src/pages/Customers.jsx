@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Sidebar from '../components/Sidebar';
-
+import { baseURL } from '../utils/config.js';
 function Customers() {
   const [csvFile, setCsvFile] = useState(null);
   const [customers, setCustomers] = useState([]);
@@ -26,7 +26,7 @@ function Customers() {
 
     try {
       setLoading(true);
-      await axios.post('http://localhost:8080/api/v1/uploads/customers', formData, {
+      await axios.post(`${baseURL}/uploads/customers`, formData, {
         headers: {
           'x-access-token': token,
           'Content-Type': 'multipart/form-data',
@@ -44,7 +44,7 @@ function Customers() {
 
   const fetchCustomers = async () => {
     try {
-      const res = await axios.get('http://localhost:8080/api/v1/customers', {
+      const res = await axios.get(`${baseURL}/customers`, {
         headers: {
           'x-access-token': token,
         },
