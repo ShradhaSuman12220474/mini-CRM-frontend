@@ -1,1 +1,1 @@
-export const baseURL = "http://50.17.133.5:3000/api/v1";
+export const baseURL = "https://mini-crm-backend-3h5b.onrender.com/api/v1";
